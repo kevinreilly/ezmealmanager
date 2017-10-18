@@ -1,0 +1,82 @@
+[
+	{
+		"name": "School District Enrollment",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"active": true,
+		"min": -100,
+		"max": 100,
+		"min_value": -20,
+		"max_value": 10,
+		"gauge": {
+			"min": -35,
+			"max": 25
+		},
+		"data_type": "percent",
+		"data_ref": "census estimate",
+		"org_type": "sponsor"
+	},
+	{
+		"name": "School Level ADA Anomaly",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"active": false,
+		"min": -100,
+		"max": 100,
+		"min_value": -30,
+		"max_value": 15,
+		"gauge": {
+			"min": -45,
+			"max": 25
+		},
+		"data_type": "percent",
+		"data_ref": "census estimate",
+		"org_type": "site"
+	},
+	{
+		"name": "School Level ADA Anomaly",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"active": false,
+		"min": -100,
+		"max": 100,
+		"min_value": -30,
+		"max_value": 15,
+		"gauge": {
+			"min": -45,
+			"max": 25
+		},
+		"data_type": "percent",
+		"data_ref": "census estimate",
+		"org_type": "site"
+	},
+	{
+		"name": "School Level ADA Anomaly",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"active": false,
+		"min": -100,
+		"max": 100,
+		"min_value": -30,
+		"max_value": 15,
+		"gauge": {
+			"min": -45,
+			"max": 25
+		},
+		"data_type": "percent",
+		"data_ref": "census estimate",
+		"org_type": "site"
+	},
+	{
+		"name": "School Level ADA Anomaly",
+		"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"active": false,
+		"min": -100,
+		"max": 100,
+		"min_value": -30,
+		"max_value": 15,
+		"gauge": {
+			"min": -45,
+			"max": 25
+		},
+		"data_type": "percent",
+		"data_ref": "census estimate",
+		"org_type": "site"
+	}
+]
