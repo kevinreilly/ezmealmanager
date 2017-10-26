@@ -4,6 +4,26 @@
 @import "bootstrap/bootstrap.scss";
 @import "font-awesome/scss/font-awesome.scss";
 
-.custom {
-	color:red;
+.dataTables_wrapper {
+	padding:0;
+	table.dataTable thead .sorting:before,
+	table.dataTable thead .sorting:after {
+		visibility:hidden;
+	}
+	table.dataTable thead .sorting:hover:before,
+	table.dataTable thead .sorting:hover:after {
+		visibility:visible;
+	}
+	table.dataTable thead .sorting:before,
+	table.dataTable thead .sorting_asc:before,
+	table.dataTable thead .sorting_desc:before,
+	table.dataTable thead .sorting_asc_disabled:before,
+	table.dataTable thead .sorting_desc_disabled:before {
+		right:1.25em;
+	}
+	table {
+		&.dataTable {
+			border-collapse:collapse !important;
+		}
+	}
 }

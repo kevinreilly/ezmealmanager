@@ -1,0 +1,37 @@
+[
+	{
+		"id": 101,
+		"name": "Northwest Summer Feeding",
+		"active": true,
+		"meals_served_today": ["B","L"],
+		"meals_reported_today": ["B","L"]
+	},
+	{
+		"id": 102,
+		"name": "Summer Camp Foods",
+		"active": true,
+		"meals_served_today": ["B","L"],
+		"meals_reported_today": ["B"]
+	},
+	{
+		"id": 103,
+		"name": "Downtown Parks and Recreation",
+		"active": true,
+		"meals_served_today": ["L"],
+		"meals_reported_today": ["L"]
+	},
+	{
+		"id": 104,
+		"name": "South Bright Start",
+		"active": true,
+		"meals_served_today": ["A","L"],
+		"meals_reported_today": ["A"]
+	},
+	{
+		"id": 105,
+		"name": "Care for Kids - Main",
+		"active": false,
+		"meals_served_today": [],
+		"meals_reported_today": []
+	}
+]

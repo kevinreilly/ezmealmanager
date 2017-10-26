@@ -62,10 +62,159 @@
 </nav>
 <nav class="breadcrumb rounded-0">
 	<a class="breadcrumb-item" href="#">Home</a>
-	<span class="breadcrumb-item active"></span>
+	<span class="breadcrumb-item active">Sites</span>
 </nav>
 <div class="container">
-			<h2>Home</h2>
+			<h2>Sites</h2>
+
+
+
+<table id="table-sites" class="table table-responsive table-striped table-sm">
+	<thead class="thead-inverse">
+		<tr>
+			<th class="bg-primary"><i class="fa fa-hashtag"></i></th>
+			<th class="bg-primary">Name</th>
+			<th class="bg-primary">Active</th>
+			<th class="bg-primary">Meals Served Today</th>
+			<th class="bg-primary">Meals Reported Today</th>
+			<th class="bg-primary">Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+		<tr>
+			<th scope="row">101</th>
+			<td><a class="text-dark" href="#">Northwest Summer Feeding</a></td>
+			<td>
+				
+					<i class="fa fa-check"></i>
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">B</span>
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">B</span>
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		
+		<tr>
+			<th scope="row">102</th>
+			<td><a class="text-dark" href="#">Summer Camp Foods</a></td>
+			<td>
+				
+					<i class="fa fa-check"></i>
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">B</span>
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">B</span>
+					
+				
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		
+		<tr>
+			<th scope="row">103</th>
+			<td><a class="text-dark" href="#">Downtown Parks and Recreation</a></td>
+			<td>
+				
+					<i class="fa fa-check"></i>
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		
+		<tr>
+			<th scope="row">104</th>
+			<td><a class="text-dark" href="#">South Bright Start</a></td>
+			<td>
+				
+					<i class="fa fa-check"></i>
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">A</span>
+					
+						<span class="meal-code">L</span>
+					
+				
+			</td>
+			<td>
+				
+					
+						<span class="meal-code">A</span>
+					
+				
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		
+		<tr>
+			<th scope="row">105</th>
+			<td><a class="text-dark" href="#">Care for Kids - Main</a></td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td>
+				
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		
+	</tbody>
+</table>
+<script>
+$(document).ready(function() {
+	$('#table-sites').DataTable({
+		columns: [null,null,null,{orderable:false},{orderable:false},{orderable:false}]
+	});
+});
+</script>
+
 		</div>
 	</body>
 </html>

@@ -1,0 +1,61 @@
+---
+layout: base
+title: Sites
+---
+
+<h2>Sites</h2>
+
+{% assign sites = site.data.sites | sort: 'id' %}
+{% if sites[0] %}
+<table id="table-sites" class="table table-responsive table-striped table-sm">
+	<thead class="thead-inverse">
+		<tr>
+			<th class="bg-primary"><i class="fa fa-hashtag"></i></th>
+			<th class="bg-primary">Name</th>
+			<th class="bg-primary">Active</th>
+			<th class="bg-primary">Meals Served Today</th>
+			<th class="bg-primary">Meals Reported Today</th>
+			<th class="bg-primary">Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for site in sites %}
+		<tr>
+			<th scope="row">{{site.id}}</th>
+			<td><a class="text-dark" href="#">{{site.name}}</a></td>
+			<td>
+				{% if site.active %}
+					<i class="fa fa-check"></i>
+				{% endif %}
+			</td>
+			<td>
+				{% if site.meals_served_today[0] %}
+					{% for meal in site.meals_served_today %}
+						<span class="meal-code">{{meal}}</span>
+					{% endfor %}
+				{% endif %}
+			</td>
+			<td>
+				{% if site.meals_reported_today[0] %}
+					{% for meal in site.meals_reported_today %}
+						<span class="meal-code">{{meal}}</span>
+					{% endfor %}
+				{% endif %}
+			</td>
+			<td><a class="text-dark" href="#"><i class="fa fa-pencil"></i></a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<script>
+$(document).ready(function() {
+	$('#table-sites').DataTable({
+		columns: [null,null,null,{orderable:false},{orderable:false},{orderable:false}]
+	});
+});
+</script>
+{% else %}
+<div class="alert alert-danger" role="alert">
+	No sites!
+</div>
+{% endif %}
