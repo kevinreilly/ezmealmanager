@@ -1,0 +1,92 @@
+---
+layout: base
+title: Site
+permalink: /sites/site/
+---
+
+{% assign site = site.data.sites[0] %}
+
+<h2>Site - {{site.name}}</h2>
+
+{% assign meals = site.meals %}
+
+{% if meals[0] %}
+	<h4>Meals</h4>
+	<ul class="nav nav-tabs" id="mealTabs" role="tablist">
+		{% for meal in meals %}
+			{% if forloop.index0 == 0 %}
+				{% assign active = 'active' %}
+			{% else %}
+				{% assign active = '' %}
+			{% endif %}
+			<li class="nav-item">
+				<a href="#tab_{{forloop.index0}}" class="nav-link {{active}}" data-toggle="tab" role="tab" aria-controls="{{meal.name}}">{{meal.name}}</a>
+			</li>
+		{% endfor %}
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Add Meal</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">AM Snack</a>
+					<a class="dropdown-item" href="#">PM Snack</a>
+					<a class="dropdown-item" href="#">Supper</a>
+				</div>
+			</li>
+	</ul>
+	<div class="tab-content" id="mealTabContents">
+		{% for meal in meals %}
+			{% if forloop.index0 == 0 %}
+				{% assign active = 'show active' %}
+			{% else %}
+				{% assign active = '' %}
+			{% endif %}
+			<div class="tab-pane fade {{active}}" id="tab_{{forloop.index0}}" role="tabpanel" aria-labelledby="{{meal.name}}-tab">
+				{% if meal.months[0] %}
+					<div class="calendar">
+						{% for month in meal.months %}
+							<div class="calendar__month">
+								<h4>{{month.name}}</h4>
+								<div class="weekday">S</div>
+								<div class="weekday">M</div>
+								<div class="weekday">T</div>
+								<div class="weekday">W</div>
+								<div class="weekday">Th</div>
+								<div class="weekday">F</div>
+								<div class="weekday">Sa</div>
+								{% assign active_days = month.days %}
+								<div class="calendar__days">
+									{% for i in (1..month.start) %}
+										<div class="calendar__day calendar__day--empty">empty</div>
+									{% endfor %}
+									{% for i in (1..month.length) %}
+										{% if active_days contains i %}
+											{% assign day_status = 'active' %}
+										{% else %}
+											{% assign day_status = 'inactive' %}
+										{% endif %}
+										<div class="calendar__day calendar__day--{{day_status}}">
+											<div class="square">
+												<div class="square_contents">
+													<div class="calendar__day__content">
+														{{i}}
+													</div>
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% else %}
+					<div class="alert alert-danger" role="alert">
+						No dates!
+					</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+{% else %}
+	<div class="alert alert-danger" role="alert">
+		No meals!
+	</div>
+{% endif %}

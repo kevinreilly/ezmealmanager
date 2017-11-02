@@ -4,6 +4,19 @@
 @import "bootstrap/bootstrap.scss";
 @import "font-awesome/scss/font-awesome.scss";
 
+.square {
+	width:100%;
+	position:relative;
+	padding-top:100%;
+	.square_contents {
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+	}
+}
+
 .dataTables_wrapper {
 	padding:0;
 	table.dataTable thead .sorting:before,
@@ -24,6 +37,52 @@
 	table {
 		&.dataTable {
 			border-collapse:collapse !important;
+		}
+	}
+}
+
+.nav-link {
+	text-transform:capitalize;
+}
+
+.calendar {
+	.weekday {
+		float:left;
+		width:(100%/7);
+		text-align:center;
+	}
+	.calendar__month {
+		float:left;
+		width:50%;
+		padding:1rem;
+		h4 {
+			text-transform:capitalize;
+			text-align:center;
+			margin:1rem 0;
+		}
+	}
+	.calendar__days {
+		&:after {
+			content:'';
+			clear:both;
+			display:block;
+		}
+	}
+	.calendar__day {
+		float:left;
+		width:(100%/7);
+		background:$gray-100;
+		border:1px solid #fff;
+		&.calendar__day--empty {
+			visibility:hidden;
+		}
+		&.calendar__day--active {
+			background:rgba($green, 0.25);
+		}
+		.calendar__day__content {
+			padding:1rem;
+			text-align:right;
+			line-height:1em;
 		}
 	}
 }
